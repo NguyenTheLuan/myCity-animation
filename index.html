@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="scene">
+        <div class="myInfo"><span>nguyễn thế luân city<br>
+                            welcome, go to my town!!
+        </span></div>
+        <div class="sun"></div>
+        <div class="background">
+            <img src="./images/police_car.gif" class="car1" alt="">
+            <img src="./images/police_car.gif" class="car2" alt="">
+            <img src="./images/police_car.gif" class="car3" alt="">
+        </div>
+    </section>
+
+<script>
+    changeScence = ()=>{ body.classList.toggle("dark")}
+
+
+    const sun = document.querySelector(".sun");
+    const body = document.querySelector('body');
+    sun.addEventListener('click',changeScence)
+</script>  
+</body>
+</html>

@@ -1,0 +1,141 @@
+@font-face { font-family: batMan; src: url('../bat_man.otf'); } 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.dark{
+    .scene{
+        background: rgb(37, 31, 31);
+        .myInfo{
+            color: rgb(241, 204, 204);
+        }
+        .sun{
+            left: 50%;
+            &:before{
+                content: '';
+                position: absolute;
+                top: -30px;
+                left: 20px;
+
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                background:  rgb(37, 31, 31);
+            }
+        }
+    }
+}
+
+.scene{
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(#a6d8ff,#fff,#fff);
+    position: relative;
+    
+    overflow: hidden;
+    .myInfo{
+        font-family: batMan;
+        text-transform: capitalize;
+        font-size: 30px;
+        font-weight: 800;
+
+        position: absolute;
+        left: 180px;
+        top: 100px;
+
+        animation: textTransition 5s linear infinite;
+    }
+    .sun{
+        position: absolute;
+        top: 100px;
+        left: 60%;
+
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background:#fff;
+        // box-shadow: 0 0 50px #fff;
+    }
+    .background{
+        background: url(../images/bg.png);
+        background-size: 1500px;
+        background-repeat: repeat;
+        width: 100%;
+        height: 270px;
+
+        position: absolute;
+        bottom: 0;
+
+        animation: animationBackground 20s linear infinite;
+        .car1{
+            position: absolute;
+            left: 0;
+            bottom: 20px;
+
+            max-width: 130px;
+            z-index: 9;
+            animation: car1-run 9s linear infinite;
+        }
+        .car2{
+            position: absolute;
+            bottom: 9px;
+            right: -200px;
+
+            
+            max-width: 150px;
+            z-index:10;
+            animation: car2-run 10s linear infinite;
+        }
+        .car3{
+            position: absolute;
+            bottom: 40px;
+            max-width: 110px;
+            transform: rotate(-30deg);
+            animation: car1-run 13s linear infinite;
+        }
+       
+    }
+}
+
+@keyframes animationBackground{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: -1500px;
+    }
+}
+
+@keyframes car1-run{
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(calc(120vw));
+    }
+}
+@keyframes car2-run{
+    0%{
+        transform: translateX(0px) rotateY(180deg) ;
+    }
+    100%{
+        transform: translateX(calc(-120vw)) rotateY(180deg);
+    }
+}
+
+
+@keyframes textTransition{
+    0%{
+        box-shadow: 0 0 white ;
+        transform: scale(1);
+    }
+    50%{
+        text-shadow: 2px 2px yellow;
+        transform: scale(1.1);
+    }
+    100%{
+        box-shadow: 0 0 white ;
+        transform: scale(1);
+    }
+}
