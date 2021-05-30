@@ -104,14 +104,6 @@
           animation: car1-run 13s linear infinite;
 }
 
-.scene .background .car4 {
-  position: absolute;
-  bottom: 50px;
-  max-width: 110px;
-  -webkit-animation: car4-run 3s linear infinite;
-          animation: car4-run 3s linear infinite;
-}
-
 @-webkit-keyframes animationBackground {
   0% {
     background-position: 0;
@@ -171,28 +163,6 @@
   100% {
     -webkit-transform: translateX(calc(-120vw)) rotateY(180deg);
             transform: translateX(calc(-120vw)) rotateY(180deg);
-  }
-}
-
-@-webkit-keyframes car4-run {
-  0% {
-    -webkit-transform: translateX(0px) rotate(-10deg);
-            transform: translateX(0px) rotate(-10deg);
-  }
-  100% {
-    -webkit-transform: translateX(calc(120vw)) rotate(-50deg);
-            transform: translateX(calc(120vw)) rotate(-50deg);
-  }
-}
-
-@keyframes car4-run {
-  0% {
-    -webkit-transform: translateX(0px) rotate(-10deg);
-            transform: translateX(0px) rotate(-10deg);
-  }
-  100% {
-    -webkit-transform: translateX(calc(120vw)) rotate(-50deg);
-            transform: translateX(calc(120vw)) rotate(-50deg);
   }
 }
 

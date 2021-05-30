@@ -93,13 +93,7 @@
             max-width: 110px;
             animation: car1-run 13s linear infinite;
         }
-        .car4{
-            position: absolute;
-            bottom: 50px;
-            max-width: 110px;
-            animation: car4-run 3s linear infinite;
-        }
-        
+       
     }
 }
 
@@ -129,14 +123,6 @@
     }
 }
 
-@keyframes car4-run{
-    0%{
-        transform: translateX(0px) rotate(-10deg);
-    }
-    100%{
-        transform: translateX(calc(120vw)) rotate(-50deg);
-    }
-}
 @keyframes textTransition{
     0%{
         box-shadow: 0 0 white ;
